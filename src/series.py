@@ -7,3 +7,7 @@ def fibonacci(n):
     while len(l) < n:
         l.append(l[-1] + l[-2])
     return l[n-1]
+
+
+def lucas(n):
+    pass
