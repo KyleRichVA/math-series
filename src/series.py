@@ -29,3 +29,30 @@ def sum_series(n, x=0, y=1):
     while len(l) < n:
         l.append(l[-1] + l[-2])
     return l[n-1]
+
+
+if __name__ == '__main__':
+    print(u"""
+    This module defines functions that implement mathematical series.
+    ...
+    fibonacci(n):
+
+    {}
+    {}
+    {}
+    ...
+    lucas(n):
+
+    {}
+    {}
+    {}
+    ...
+    sum_series(n[,First Number, Second Number])
+
+    {}
+    {}
+    {}
+    """).format(fibonacci.__doc__, u'>>> fibonacci(3)', fibonacci(3),
+                lucas.__doc__, u'>>> lucas(3)', lucas(3),
+                sum_series.__doc__, u'>>> sum_series(3, 4, 4)',
+                sum_series(3, 4, 4))
