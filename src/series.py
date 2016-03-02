@@ -20,15 +20,13 @@ def lucas(n):
     return l[n-1]
 
 
-def sum_series(n, x=0, y=1):
+def sum_series(n, first=0, second=1):
     """Return nth number of a sequence with the first two digits x and y.
     Defaults to fibonacci sequence otherwise."""
-    if n <= 0:
-        return 0
-    l = [x, y]
-    while len(l) < n:
-        l.append(l[-1] + l[-2])
-    return l[n-1]
+    if n <= 1:
+        return first
+    else:
+        return sum_series(n-1, second, first + second)
 
 
 if __name__ == '__main__':
